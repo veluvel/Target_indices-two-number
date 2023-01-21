@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>target value</title>
+  </head>
+  <body>
+    <h1>Check Console</h1>
+    <pre>
+        Write a JavaScript program to find a pair of elements (indices of the two numbers) from an given array whose sum equals a specific target number.
+        Input: numbers= [10,20,10,40,50,60,70], target=50
+        Output: 2, 3
+    </pre>
+    <script>
+      // target values
+      function finds(numbers, target) {
+        for (let i = 0; i < numbers.length; i++) {
+          for (let j = 1; j < numbers.length; j++) {
+            if (numbers[i] + numbers[j] === target) {
+              return [i, j];
+            }
+          }
+        }
+      }
+
+      console.log(finds([10, 20, 10, 40, 50, 60, 70], 60));
+    </script>
+  </body>
+</html>
